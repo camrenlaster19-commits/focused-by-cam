@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Focused by Cam offers portraits, couples, weddings, graduations, editorials, branding, and creative photography sessions."
+  >
+
+  <title>Focused by Cam | Photography & Booking</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div
+    class="loader"
+    id="loader"
+    aria-hidden="true"
+  >
+    <div>
+      <b>FOCUSED</b>
+      <span>BY CAM</span>
+    </div>
+  </div>
+
+  <header
+    class="header"
+    id="header"
+  >
+
+    <a
+      href="#home"
+      class="logo"
+    >
+      FOCUSED <span>BY CAM</span>
+    </a>
+
+    <button
+      class="menu"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book</a>
+      <a href="#policies">Policies</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="hero-copy reveal">
+
+        <p class="eyebrow">
+          Focused by Cam Photography
+        </p>
+
+        <h1>
+          Moments<br>
+          Become Art.
+        </h1>
+
+        <p>
+          Portraits, couples, weddings, graduations,
+          editorials, branding, and creative sessions
+          photographed with intention.
+        </p>
+
+        <div class="actions">
+
+          <a
+            href="#booking"
+            class="btn primary"
+          >
+            Book a Session
+          </a>
+
+          <a
+            href="#portfolio"
+            class="btn outline"
+          >
+            View Portfolio
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="strip">
+
+      <div class="reveal">
+        <strong>Creative</strong>
+        <span>
+          Portrait direction built around your style.
+        </span>
+      </div>
+
+      <div class="reveal">
+        <strong>Personal</strong>
+        <span>
+          A comfortable session that feels like you.
+        </span>
+      </div>
+
+      <div class="reveal">
+        <strong>Focused</strong>
+        <span>
+          Polished photographs delivered with intention.
+        </span>
+      </div>
+
+    </section>
+
+    <section
+      class="section dark"
+      id="portfolio"
+    >
+
+      <div class="heading reveal">
+
+        <p class="eyebrow">
+          Selected Work
+        </p>
+
+        <h2>
+          Focused Through My Lens
+        </h2>
+
+        <p>
+          Click any photograph to view it full screen.
+        </p>
+
+      </div>
+
+      <div
+        class="filters reveal"
+        aria-label="Portfolio filters"
+      >
+
+        <button
+          class="filter active"
+          type="button"
+          data-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="portrait"
+        >
+          Portraits
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="editorial"
+        >
+          Editorial
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="wedding"
+        >
+          Weddings
+        </button>
+
+        <button
+          class="filter"
+          type="button"
+          data-filter="couples"
+        >
+          Couples
+        </button>
+
+      </div>
+
+      <div class="gallery">
+
+        <figure
+          class="gallery-item reveal"
+          data-category="portrait editorial"
+          data-caption="Editorial Portrait"
+        >
+
+          <img
+            src="images/pink-mural.jpg"
+            alt="Male portrait wearing pink in front of a colorful mural"
+          >
+
+          <figcaption>
+            <b>Editorial Portrait</b>
+            <span>
+              Portraits and creative direction
+            </span>
+          </figcaption>
+
+        </figure>
+
+        <figure
+          class="gallery-item reveal"
+          data-category="portrait editorial"
+          data-caption="Creative Portrait"
+        >
+
+          <img
+            src="images/green-wall.jpg"
+            alt="Male portrait photographed against a green wall"
+          >
+
+          <figcaption>
+            <b>Creative Portrait</b>
+            <span>
+              Bold color and dramatic lighting
+            </span>
+          </figcaption>
+
+        </figure>
+
+        <figure
+          class="gallery-item reveal"
+          data-category="editorial portrait"
+          data-caption="Night Editorial"
+        >
+
+          <img
+            src="images/hero-black-suit.jpg"
+            alt="Male fashion portrait in a black suit at night"
+          >
+
+          <figcaption>
+            <b>Night Editorial</b>
+            <span>
+              Fashion and personal branding
+            </span>
+          </figcaption>
+
+        </figure>
+
+        <figure
+          class="gallery-item reveal"
+          data-category="wedding couples"
+          data-caption="Wedding Portrait"
+        >
+
+          <img
+            src="images/wedding-portrait.jpg"
+            alt="Bride and groom posing together"
+          >
+
+          <figcaption>
+            <b>Wedding Portrait</b>
+            <span>
+              Elegant and timeless moments
+            </span>
+          </figcaption>
+
+        </figure>
+
+        <figure
+          class="gallery-item reveal"
+          data-category="wedding couples"
+          data-caption="Wedding Moment"
+        >
+
+          <img
+            src="images/wedding-kiss.jpg"
+            alt="Bride and groom kissing"
+          >
+
+          <figcaption>
+            <b>Wedding Moment</b>
+            <span>
+              Love stories captured naturally
+            </span>
+          </figcaption>
+
+        </figure>
+
+        <figure
+          class="gallery-item reveal"
+          data-category="couples portrait"
+          data-caption="Couples Portrait"
+        >
+
+          <img
+            src="images/couple-black.jpg"
+            alt="Couple wearing black posing together"
+          >
+
+          <figcaption>
+            <b>Couples Portrait</b>
+            <span>
+              Connection, personality, and style
+            </span>
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </section>
+
+    <section
+      class="section"
+      id="packages"
+    >
+
+      <div class="heading reveal">
+
+        <p class="eyebrow">
+          Choose Your Experience
+        </p>
+
+        <h2>
+          Photography Packages
+        </h2>
+
+        <p>
+          Every package includes a private proof gallery,
+          access to all unedited proofs for selection,
+          and a 2–3 business day turnaround after selections.
+        </p>
+
+      </div>
+
+      <div class="packages">
+
+        <article class="package reveal">
+
+          <div class="pkg-body">
+
+            <small>Starter Session</small>
+
+            <h3>Plan</h3>
+
+            <p class="price">$75</p>
+
+            <ul>
+              <li>30 minutes</li>
+              <li>3 edits</li>
+              <li>1 location</li>
+              <li>Private proof gallery</li>
+              <li>Choose your final edits</li>
+              <li>2–3 business day turnaround</li>
+            </ul>
+
+            <button
+              class="btn darkbtn choose"
+              type="button"
+              data-package="Plan"
+            >
+              Book Plan
+            </button>
+
+          </div>
+
+        </article>
+
+        <article class="package reveal">
+
+          <div class="pkg-body">
+
+            <small>Quick and Focused</small>
+
+            <h3>Focus</h3>
+
+            <p class="price">$150</p>
+
+            <ul>
+              <li>30 minutes</li>
+              <li>10 edits</li>
+              <li>1 location</li>
+              <li>Private proof gallery</li>
+              <li>Choose your final edits</li>
+              <li>2–3 business day turnaround</li>
+            </ul>
+
+            <button
+              class="btn darkbtn choose"
+              type="button"
+              data-package="Focus"
+            >
+              Book Focus
+            </button>
+
+          </div>
+
+        </article>
+
+        <article class="package reveal">
+
+          <div class="pkg-body">
+
+            <small>More Variety</small>
+
+            <h3>Vision</h3>
+
+            <p class="price">$250</p>
+
+            <ul>
+              <li>1 hour</li>
+              <li>20 edits</li>
+              <li>Up to 2 outfits</li>
+              <li>Up to 2 locations</li>
+              <li>Priority editing</li>
+              <li>Private proof gallery</li>
+              <li>Choose your final edits</li>
+            </ul>
+
+            <button
+              class="btn darkbtn choose"
+              type="button"
+              data-package="Vision"
+            >
+              Book Vision
+            </button>
+
+          </div>
+
+        </article>
+
+        <article class="package featured reveal">
+
+          <div class="badge">
+            Best Experience
+          </div>
+
+          <div class="pkg-body">
+
+            <small>
+              Full Creative Experience
+            </small>
+
+            <h3>Signature</h3>
+
+            <p class="price">$400</p>
+
+            <ul>
+              <li>90 minutes</li>
+              <li>35 edits</li>
+              <li>Unlimited outfit changes</li>
+              <li>Up to 3 locations</li>
+              <li>Creative lighting</li>
+              <li>Behind-the-scenes video</li>
+              <li>Rush delivery</li>
+              <li>Edited social media reel</li>
+            </ul>
+
+            <button
+              class="btn accent choose"
+              type="button"
+              data-package="Signature"
+            >
+              Book Signature
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section
+      class="section about"
+      id="about"
+    >
+
+      <div class="about-text reveal">
+
+        <p class="eyebrow">
+          About Focused by Cam
+        </p>
+
+        <h2>
+          Photography That Feels Like You.
+        </h2>
+
+        <p>
+          Focused by Cam creates intentional, confident,
+          and personal images. Every session starts with
+          your vision and turns it into photographs you
+          can keep, post, and be proud of.
+        </p>
+
+        <p>
+          From creative portraits and branding to couples
+          and special events, the goal is to make you
+          comfortable, direct you clearly, and create
+          work that stands out.
+        </p>
+
+        <a
+          href="#booking"
+          class="btn primary"
+        >
+          Start Your Session
+        </a>
+
+      </div>
+
+    </section>
+
+    <section
+      class="section booking-section"
+      id="booking"
+    >
+
+      <div class="heading reveal">
+
+        <p class="eyebrow">
+          Reserve Your Date
+        </p>
+
+        <h2>
+          Book Your Session
+        </h2>
+
+        <p>
+          Choose your photography experience, view live
+          availability, and securely pay your nonrefundable
+          retainer through Square.
+        </p>
+
+      </div>
+
+      <div class="square-booking-layout">
+
+        <div class="square-booking-card reveal">
+
+          <p class="eyebrow">
+            Focused by Cam
+          </p>
+
+          <h3>
+            Ready to Get Focused?
+          </h3>
+
+          <p class="square-booking-text">
+            Square will collect your contact information,
+            package selection, preferred date and time,
+            location details, and retainer payment.
+            You will also receive automatic confirmations
+            and reminders.
+          </p>
+
+          <div class="booking-benefits">
+
+            <div class="booking-benefit">
+
+              <span>01</span>
+
+              <div>
+                <strong>
+                  Choose Your Package
+                </strong>
+
+                <p>
+                  Select Plan, Focus, Vision, or Signature.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="booking-benefit">
+
+              <span>02</span>
+
+              <div>
+                <strong>
+                  View Live Availability
+                </strong>
+
+                <p>
+                  Choose from the dates and times currently available.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="booking-benefit">
+
+              <span>03</span>
+
+              <div>
+                <strong>
+                  Pay Your Retainer
+                </strong>
+
+                <p>
+                  Securely reserve your appointment through Square.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="booking-benefit">
+
+              <span>04</span>
+
+              <div>
+                <strong>
+                  Receive Confirmation
+                </strong>
+
+                <p>
+                  Get automatic email and text reminders.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <a
+            class="btn primary square-booking-button"
+            href="https://book.squareup.com/appointments/8svbsbzt2lox14/location/LZG7V12MR849J/services"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Availability & Book
+          </a>
+
+          <p class="secure-booking-note">
+            Secure booking and payment powered by Square.
+          </p>
+
+        </div>
+
+        <aside class="booking-sidebar reveal">
+
+          <p class="eyebrow">
+            Before You Book
+          </p>
+
+          <h3>
+            Booking Details
+          </h3>
+
+          <ul class="booking-detail-list">
+
+            <li>
+              A nonrefundable retainer is required
+              to reserve your session.
+            </li>
+
+            <li>
+              The remaining balance is due on or
+              before the day of your session.
+            </li>
+
+            <li>
+              Clients are welcome to reschedule
+              with at least 24 hours’ notice.
+            </li>
+
+            <li>
+              Same-day appointments are subject
+              to availability and include a $25 fee.
+            </li>
+
+            <li>
+              You will receive a private proof gallery
+              to choose your final edits.
+            </li>
+
+            <li>
+              Standard turnaround is 2–3 business days
+              after selections are submitted.
+            </li>
+
+          </ul>
+
+          <div class="same-day-notice">
+
+            <strong>
+              Need a Same-Day Session?
+            </strong>
+
+            <p>
+              Contact Focused by Cam before booking
+              so availability and the additional fee
+              can be confirmed.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <section
+      class="section policies"
+      id="policies"
+    >
+
+      <div class="heading reveal">
+
+        <p class="eyebrow">
+          Please Read
+        </p>
+
+        <h2>
+          Booking Policies
+        </h2>
+
+      </div>
+
+      <div class="policy-grid">
+
+        <article class="reveal">
+
+          <h3>
+            Retainers and Payments
+          </h3>
+
+          <p>
+            A nonrefundable retainer is required to
+            reserve your appointment. The remaining
+            balance is due no later than the beginning
+            of the session.
+          </p>
+
+        </article>
+
+        <article class="reveal">
+
+          <h3>
+            No Refunds
+          </h3>
+
+          <p>
+            All retainers and payments are nonrefundable.
+            Clients are always welcome to reschedule and
+            transfer the amount paid to another available date.
+          </p>
+
+        </article>
+
+        <article class="reveal">
+
+          <h3>
+            Rescheduling
+          </h3>
+
+          <p>
+            Rescheduling requests should be made at least
+            24 hours before the appointment. Payments may
+            be transferred one time to a new available date.
+          </p>
+
+        </article>
+
+        <article class="reveal">
+
+          <h3>
+            Same-Day Bookings
+          </h3>
+
+          <p>
+            Same-day appointments include an additional
+            $25 fee and are subject to availability and approval.
+          </p>
+
+        </article>
+
+        <article class="reveal">
+
+          <h3>
+            Proofs and Edits
+          </h3>
+
+          <p>
+            Clients receive a private proof gallery and
+            select the photographs included with their
+            package for professional editing.
+          </p>
+
+        </article>
+
+        <article class="reveal">
+
+          <h3>
+            Turnaround
+          </h3>
+
+          <p>
+            Final edited photographs are delivered within
+            2–3 business days after image selections
+            are submitted.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div>
+
+      <a
+        href="#home"
+        class="logo"
+      >
+        FOCUSED <span>BY CAM</span>
+      </a>
+
+      <p>
+        Photography with intention,
+        personality, and focus.
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book</a>
+      <a href="#policies">Policies</a>
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+    </div>
+
+    <p class="copy">
+      © <span id="currentYear"></span>
+      Focused by Cam. All rights reserved.
+    </p>
+
+  </footer>
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+  >
+
+    <button
+      id="lightboxClose"
+      type="button"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <button
+      class="prev"
+      id="lightboxPrev"
+      type="button"
+      aria-label="Previous image"
+    >
+      ‹
+    </button>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt=""
+    >
+
+    <button
+      class="next"
+      id="lightboxNext"
+      type="button"
+      aria-label="Next image"
+    >
+      ›
+    </button>
+
+    <p id="lightboxCaption"></p>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
