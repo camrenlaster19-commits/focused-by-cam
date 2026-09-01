@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK03YW99QL"></script>
@@ -6,12 +7,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-YK03YW99QL');
   </script>
 
-<html lang="en">
-<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Explore the full Focused by Cam photography portfolio: portraits, editorials, game day, nightlife, events, couples, and weddings." name="description"/>
@@ -148,3 +146,11 @@
 </footer>
 <div aria-hidden="true" class="lightbox" id="lightbox">
 <button aria-label="Close image" id="lightboxClose" type="button">×</button>
+<button aria-label="Previous image" class="prev" id="lightboxPrev" type="button">‹</button>
+<img alt="" id="lightboxImage" src=""/>
+<button aria-label="Next image" class="next" id="lightboxNext" type="button">›</button>
+<p id="lightboxCaption"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
