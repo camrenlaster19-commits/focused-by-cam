@@ -23,6 +23,7 @@ menuButton.addEventListener("click", () => {
     "menu-open",
     isOpen
   );
+  menuButton.setAttribute("aria-expanded", String(isOpen));
 });
 
 navMenu
@@ -118,10 +119,10 @@ document
     button.href = bookingLink;
   });
 
-document.getElementById(
-  "currentYear"
-).textContent =
-  new Date().getFullYear();
+const currentYear = document.getElementById("currentYear");
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
 
 const lightbox =
   document.getElementById("lightbox");
@@ -247,3 +248,98 @@ document.addEventListener(
     }
   }
 );
+// Group photos from the same shoot into one frame and cycle them automatically.
+const shootCards = [...document.querySelectorAll('.shoot-card')];
+
+shootCards.forEach((card, cardIndex) => {
+  const slides = [...card.querySelectorAll('.shoot-slide')];
+  const dots = [...card.querySelectorAll('.shoot-dot')];
+  let slideIndex = 0;
+  let timer;
+
+  const setSlide = (index) => {
+    if (!slides.length) return;
+    slideIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === slideIndex));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
+  };
+
+  const start = () => {
+    if (slides.length < 2) return;
+    clearInterval(timer);
+    // Slight offset keeps every frame from changing at exactly the same moment.
+    timer = setInterval(() => setSlide(slideIndex + 1), 3800 + ((cardIndex % 4) * 350));
+  };
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', (event) => {
+      event.stopPropagation();
+      setSlide(i);
+      start();
+    });
+  });
+
+  card.addEventListener('mouseenter', () => clearInterval(timer));
+  card.addEventListener('mouseleave', start);
+  start();
+});
+
+// Filter whole shoots instead of separating photos from the same session.
+document.querySelectorAll('.filter').forEach((button) => {
+  button.addEventListener('click', () => {
+    const selectedFilter = button.dataset.filter;
+    shootCards.forEach((card) => {
+      const categories = (card.dataset.category || '').split(' ');
+      const shouldHide = selectedFilter !== 'all' && !categories.includes(selectedFilter);
+      card.classList.toggle('hidden', shouldHide);
+    });
+  });
+});
+
+// Lightbox support for grouped shoot cards.
+if (lightbox && lightboxImage && lightboxCaption) {
+  let shootLightboxImages = [];
+  let shootLightboxIndex = 0;
+
+  const openShootLightbox = (card) => {
+    const visibleCards = shootCards.filter((item) => !item.classList.contains('hidden'));
+    shootLightboxImages = visibleCards.flatMap((item) =>
+      [...item.querySelectorAll('.shoot-slide')].map((img) => ({
+        src: img.src,
+        alt: img.alt,
+        caption: item.dataset.caption || 'Focused by Cam'
+      }))
+    );
+
+    const active = card.querySelector('.shoot-slide.active') || card.querySelector('.shoot-slide');
+    shootLightboxIndex = Math.max(0, shootLightboxImages.findIndex((item) => item.src === active.src));
+    const item = shootLightboxImages[shootLightboxIndex];
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt;
+    lightboxCaption.textContent = '';
+    lightbox.classList.add('open');
+    document.body.classList.add('lightbox-open');
+  };
+
+  const moveShootLightbox = (direction) => {
+    if (!shootLightboxImages.length) return;
+    shootLightboxIndex = (shootLightboxIndex + direction + shootLightboxImages.length) % shootLightboxImages.length;
+    const item = shootLightboxImages[shootLightboxIndex];
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt;
+    lightboxCaption.textContent = '';
+  };
+
+  shootCards.forEach((card) => card.addEventListener('click', () => openShootLightbox(card)));
+
+  const prevButton = document.getElementById('lightboxPrev');
+  const nextButton = document.getElementById('lightboxNext');
+  if (prevButton) prevButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (shootLightboxImages.length) moveShootLightbox(-1);
+  });
+  if (nextButton) nextButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (shootLightboxImages.length) moveShootLightbox(1);
+  });
+}
